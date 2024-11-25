@@ -1,0 +1,166 @@
+/* Estilos para la barra de navegación */
+.nav-bar {
+    position: absolute;
+    top: 10px;
+    left: 50%; /* Centra el contenedor horizontalmente */
+    transform: translateX(-50%); /* Ajusta el contenedor para que esté centrado */
+    display: flex;
+    flex-direction: row; /* Coloca los botones en fila */
+    gap: 20px; /* Espacio fijo entre los botones */
+}
+
+.nav-button {
+    background-color: #15488a;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    border-radius: 5px; /* Bordes redondeados */
+    transition: background-color 0.3s ease;
+}
+
+.nav-button:hover {
+    background-color: #555;
+}
+
+/* Menú desplegable */
+.nav-dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none; /* Oculta el contenido por defecto */
+    position: absolute;
+    background-color: #15488a;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 10px; /* Bordes redondeados para el contenedor del menú */
+    z-index: 1;
+    flex-direction: column;
+    padding: 10px; /* Espacio alrededor de los botones */
+}
+
+.dropdown-content .nav-button {
+    width: 100%;
+    padding: 10px 15px;
+    margin: 5px 0; /* Espacio entre los botones */
+    border-radius: 10px; /* Bordes redondeados para los botones */
+}
+
+/* Muestra las opciones cuando se pasa el cursor sobre el botón Galería */
+.nav-dropdown:hover .dropdown-content {
+    display: flex; /* Cambia de 'none' a 'flex' para mostrar el contenido */
+}
+
+/* Fondo de la página */
+.background-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #ffffff;
+}
+
+/* Imagen centrada */
+#main-image {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: cover;
+    border-radius: 15px;
+}
+
+/* Estilos para la sección de trajes */
+#trajes-section {
+    background-color: #191c1d; /* Color suave inspirado en Spider-Man 
+    padding: 40px;
+    border-radius: 20px; /* Bordes redondeados */
+}
+
+/* Estilo del título h2 para los trajes */
+h2 {
+    font-family: 'Poppins', sans-serif; /* Letra más suave y moderna */
+    font-size: 32px;
+    color: #b22222; /* Color rojo oscuro inspirado en Spider-Man */
+    text-align: center;
+    margin-bottom: 30px;
+    letter-spacing: 1px;
+}
+
+/* Galería de trajes */
+.trajes-gallery {
+    display: flex;
+    justify-content: center;
+    gap: 40px; /* Aumenta la distancia entre las imágenes */
+    padding: 20px;
+}
+
+/* Estilos para las imágenes de los trajes */
+.traje-image {
+    width: 300px; /* Aumenta el ancho */
+    height: 450px; /* Aumenta la altura */
+    object-fit: cover;
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para las imágenes de los trajes */
+.traje-image:hover {
+    transform: scale(1.1);
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Aumenta la sombra al hacer hover */
+}
+
+/* Estilos para el slider */
+.trajes-slider {
+    position: relative;
+    width: 100%;
+    max-width: 600px; /* Ajusta el tamaño del slider */
+    margin: 0 auto; /* Centra el slider */
+    overflow: hidden; /* Oculta imágenes fuera del contenedor */
+}
+
+.traje-image {
+    display: none; /* Oculta las imágenes por defecto */
+    width: 100%; /* Asegura que las imágenes ocupen todo el contenedor */
+}
+
+.traje-image.active {
+    display: block; /* Muestra solo la imagen activa */
+}
+
+/* Estilo de la imagen */
+.traje-image img {
+    width: 100%; /* Asegura que las imágenes se escalen */
+    border-radius: 20px; /* Bordes más redondeados */
+}
+
+/* Estilos para la galería de trajes */
+.trajes-slider {
+    display: flex;
+    justify-content: center; /* Centra horizontalmente el contenido */
+    align-items: center; /* Centra verticalmente el contenido (opcional) */
+    overflow: hidden; /* Asegura que no se desborde el contenido */
+    position: relative; /* Permite posicionamiento de elementos internos */
+    height: 450px; /* Ajusta la altura total del contenedor */
+}
+
+/* Estilos para las imágenes de los trajes */
+.traje-image {
+    width: 200px; /* Ajusta el ancho a 200 píxeles */
+    height: 300px; /* Ajusta la altura a 300 píxeles */
+    object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor */
+    border-radius: 20px; /* Bordes más redondeados */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.3); /* Sombra más pronunciada */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efecto hover para las imágenes de los trajes */
+.traje-image:hover {
+    transform: scale(1.05); /* Efecto de escalado al hacer hover */
+    box-shadow: 0px 12px 24px rgba(0, 0, 0, 0.4); /* Aumenta la sombra al hacer hover */
+}
+
+

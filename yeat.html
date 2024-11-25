@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marvel Spider-Man</title>
+    <link rel="stylesheet" href="1.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <script>
+        function mostrarTrajes() {
+            document.getElementById("main-section").style.display = "none";  // Oculta la sección principal
+            document.getElementById("trajes-section").style.display = "block";  // Muestra la sección de los trajes
+        }
+    </script>
+</head>
+<body>
+    <!-- Sección de los botones -->
+    <div class="nav-bar">
+        <button class="nav-button">Inicio</button>
+        
+        <!-- Botón Galería con submenú -->
+        <div class="nav-dropdown">
+            <button class="nav-button">Galería</button>
+            <div class="dropdown-content">
+                <button class="nav-button" onclick="mostrarTrajes()">Trajes</button>
+                <button class="nav-button">Habilidades</button>
+                <button class="nav-button">Lanzatelarañas</button>
+                <button class="nav-button">Mapa</button>
+            </div>
+        </div>
+
+        <button class="nav-button">Soporte</button>
+        <button class="nav-button">Acceder</button>
+    </div>
+
+    <!-- Sección principal con la imagen -->
+    <div class="background-image" id="main-section">
+        <img src="c:\DESCARGAS\top\marvel_s_spider_man___psn_store_page_by_pixelschism_dh1qtwz.jpg" alt="Imagen de alta resolución" id="main-image">
+    </div>
+
+    <!-- Nueva sección para mostrar las imágenes de los trajes -->
+<div id="trajes-section" style="display: none;">
+    <h2>Trajes de Spider-Man</h2>
+    
+    <div class="trajes-gallery">
+        <img src="c:\DESCARGAS\VISUAL CODE\index\Nueva carpeta\peter_parker__scarlet_spider__by_kamenriderfan09_dhfwkmm.png" alt="Traje 1" class="traje-image">
+        <img src="c:\DESCARGAS\VISUAL CODE\index\Nueva carpeta\peter_parker__superior_suit__by_kamenriderfan09_dgprfm0.png" alt="Traje 2" class="traje-image">
+        <img src="c:\DESCARGAS\VISUAL CODE\index\Nueva carpeta\black_suit_spider_man_portrait_art_by_cptcommunist_d98xbpz.png" alt="Traje 3" class="traje-image">
+        <img src="c:\DESCARGAS\VISUAL CODE\index\Nueva carpeta\spider_man_ps4_png_by_metropolis_hero1125_dcnqkrx.png" alt="Traje 4" class="traje-image">
+
+        <!-- Nuevas imágenes añadidas -->
+        <img src="c:\DESCARGAS\VISUAL CODE\index\Nueva carpeta\spider_man_2099_portrait_art_by_cptcommunist_d98xi4b.png" alt="Traje 5" class="traje-image">
+        <img src="c:\DESCARGAS\VISUAL CODE\index\Nueva carpeta\spider_man__classic_suit____png__7__by_dhv123_df7aoxi.png" alt="Traje 6" class="traje-image">
+        <img src="c:\DESCARGAS\VISUAL CODE\index\Nueva carpeta\peter_parker__advanced_suit__by_kamenriderfan09_dhfi0kv.png" alt="Traje 7" class="traje-image">
+        <img src="c:\DESCARGAS\VISUAL CODE\index\Nueva carpeta\miles_morales_by_cptcommunist_d98xhn8.png" alt="Traje 8" class="traje-image">
+    </div>
+</div>
+
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.traje-image');
+
+        function mostrarImagenSiguiente() {
+            images[currentIndex].classList.remove('active'); // Oculta la imagen actual
+            currentIndex = (currentIndex + 1) % images.length; // Avanza al siguiente índice
+            images[currentIndex].classList.add('active'); // Muestra la nueva imagen
+        }
+
+        setInterval(mostrarImagenSiguiente, 2000); // Cambia la imagen cada 2 segundos
+    </script>
+</body>
+</html>
